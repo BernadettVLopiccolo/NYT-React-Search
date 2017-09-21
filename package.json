@@ -10,12 +10,14 @@
     "mongoose": "^4.11.11",
     "react-router-dom": "^4.2.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
     "server": "node server.js",
     "client": "cd client && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
     "build": "cd client && npm run build",
     "deploy": "npm run build && git add . && git commit -m \"Building for production\" && git push heroku master",

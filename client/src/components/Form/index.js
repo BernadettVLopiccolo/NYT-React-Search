@@ -1,5 +1,5 @@
-export * from "./topicInput";
-export * from "./startYearInput";
-export * from "./endYearInput";
+export * from "./TopicInput";
+export * from "./StartYearInput";
+export * from "./EndYearInput";
 export * from "./FormBtn";
 

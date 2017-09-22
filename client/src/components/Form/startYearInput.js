@@ -1,6 +1,8 @@
 import React from "react";
 
-export const startYearInput = props =>
+const StartYearInput = props =>
   <div className="form-group">
     <input className="form-control" {...props} />
   </div>;
+
+  export  default StartYearInput;

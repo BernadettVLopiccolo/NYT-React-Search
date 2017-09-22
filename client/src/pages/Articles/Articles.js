@@ -4,15 +4,19 @@ import DeleteBtn from "../../components/DeleteBtn";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { topicInput, startYearInput, endYearInput, FormBtn } from "../../components/Form";
+// import { startYearInput, endYearInput, FormBtn } from "../../components/Form";
+import TopicInput from "../../components/Form/TopicInput";
+import StartYearInput from "../../components/Form/StartYearInput";
+import EndYearInput from "../../components/Form/EndYearInput";
+import FormBtn from "../../components/Form/FormBtn";
 import "./Articles.css";
 class Articles extends Component {
   // Setting our component's initial state
   state = {
     articles: [],
     topic: "",
-    startYear: 0,
-    endYear: 0,
+    startYear: "",
+    endYear: "",
   };
 
   // When the component mounts, load all articles and save them to this.state.articles
@@ -67,19 +71,19 @@ class Articles extends Component {
             <Jumbotron>
               <h1 className="search">Search</h1>
             <form>
-              <topicInput
+              <TopicInput
                 value={this.state.topic}
                 onChange={this.handleInputChange}
                 name="topic"
                 placeholder="Topic (required)"
               />
-              <startYearInput
+              <StartYearInput
                 value={this.state.startYear}
                 onChange={this.handleInputChange}
                 name="startYear"
                 placeholder="StartYear (required)"
               />
-              <endYearInput
+              <EndYearInput
                 value={this.state.endYear}
                 onChange={this.handleInputChange}
                 name="endYear"

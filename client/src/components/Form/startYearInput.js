@@ -5,4 +5,4 @@ const StartYearInput = props =>
     <input className="form-control" {...props} />
   </div>;
 
-  export  default StartYearInput;
+  export default StartYearInput;
